@@ -8,11 +8,6 @@ resource "azurerm_resource_group" "rg" {
   name     = random_pet.rg_name.id
 }
 
-module "azurerm_net" {
-  source              = "./azurerm_net"
-  location = var.resource_group_location
-  resource_group_name = var.resource_group_name_prefix
-}
 
 
 module "azurerm_vm" {
