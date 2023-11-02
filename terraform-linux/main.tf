@@ -14,11 +14,6 @@ module "azurerm_net" {
   resource_group_name = var.resource_group_name_prefix
 }
 
-module "azurerm_storage" {
-  source              = "./azurerm_storage"
-   location = var.resource_group_location
-  resource_group_name = var.resource_group_name_prefix
-}
 
 module "azurerm_vm" {
   source              = "./azurerm_vm"
