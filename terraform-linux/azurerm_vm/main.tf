@@ -115,7 +115,7 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
 
   admin_ssh_key {
     username   = var.username
-    public_key = file("${path.module}/ssh-keys/terraform-azure.pem.pub")
+    public_key = file("${path.root}/ssh-keys/terraform-azure.pem.pub")
   }
 
   boot_diagnostics {
