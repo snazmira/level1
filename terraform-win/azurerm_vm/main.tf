@@ -1,3 +1,15 @@
+#setup remote state
+terraform {
+  backend "azurerm" {
+    resource_group_name = "rg-terraformstate-win"
+    storage_account_name = "myterrastate-win"
+    container_name = "terraform-win"
+    key = "terraform-win.tfstate"
+  }
+}
+
+
+
 resource "azurerm_resource_group" "rg" {
   location = var.resource_group_location
   name     = "${random_pet.prefix.id}-rg"
