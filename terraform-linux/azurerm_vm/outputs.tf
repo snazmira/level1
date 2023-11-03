@@ -27,7 +27,7 @@ output "network_interface_security_group_association" {
 }
 
 
-output "storage_account.my" {
+output "storage_account" {
   value = azurerm_storage_account.my_storage_account.id
 }
 
