@@ -1,24 +1,15 @@
-
-resource "random_pet" "rg_name" {
-  prefix = var.prefix
-}
-
-resource "azurerm_resource_group" "rg" {
-  location = var.resource_group_location
-  name     = random_pet.rg_name.id
-}
-
-module "azurerm_net" {
-  source              = "./azurerm_net"
-
-}
-
-module "azurerm_storage" {
-  source              = "./azurerm_storage"
-  
-}
-
 module "azurerm_vm" {
   source              = "./azurerm_vm"
+  virtual_network = var.virtual_network
+  subnet = var.subnet
+  public_ip = var.public_ip
+  network_security_group = var.network_security_group
+  network_interface = var.network_interface
+  network_interface_security_group_association = var.network_interface_security_group_association
+  storage_account = var.storage_account
+  key_vault = var.key_vault
+  key_vault_secret = var.key_vault_secret
+  virtual_machine_extension = var.virtual_machine_extension
+  virtual_machine = var.virtual_machine
 
 }
