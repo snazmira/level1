@@ -16,5 +16,36 @@ variable "username" {
   default     = "azureuser"
 }
 
-variable "resource_group_name" {}
-variable "location" {}
+variable "virtual_network" {
+  
+}
+
+variable "subnet" {
+  
+}
+
+variable "public_ip" {
+  
+}
+
+variable "network_security_group" {
+  
+}
+
+variable "network_interface" {
+  
+}
+
+
+variable "network_interface_security_group_association" {
+  
+}
+
+variable "storage_account" {
+  
+}
+
+variable "virtual_machine" {
+  
+}
+
