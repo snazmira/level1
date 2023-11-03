@@ -1,3 +1,12 @@
+#setup remote state
+terraform {
+  backend "azurerm" {
+    resource_group_name = "rg-terraformstate-linux"
+    storage_account_name = "myterrastatelinux"
+    container_name = "terraform-linux"
+    key = "terraform-linux.tfstate"
+  }
+}
 
 
 

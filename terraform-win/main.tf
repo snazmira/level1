@@ -1,3 +1,15 @@
+#setup remote state
+terraform {
+  backend "azurerm" {
+    resource_group_name = "rg-terraformstate-win"
+    storage_account_name = "myterrastate-win"
+    container_name = "terraform-win"
+    key = "terraform-win.tfstate"
+  }
+}
+
+
+
 module "azurerm_vm" {
   source              = "./azurerm_vm"
   virtual_network = var.virtual_network
