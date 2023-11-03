@@ -5,13 +5,13 @@ variable "resource_group_location" {
 
 variable "prefix" {
   type        = string
-  default     = "win-vm-iis002"
+  default     = "win-vm-02"
   description = "Prefix of the resource name"
 }
 
 variable "kv_secret_name" {
   type = string
-  default = "wins-kv-pass002"
+  default = "wins-kv-002"
   description = "kv secret name"
 }
 
